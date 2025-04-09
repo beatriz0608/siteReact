@@ -1,0 +1,346 @@
+/* Configurações globais */
+body {
+  font-family: 'Lora', serif; /* Fonte Lora para os textos gerais */
+  background-color: #f8f8f8;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background: linear-gradient(to right, #ff80ab, #f0a6ca); /* Gradiente suave */
+  color: white;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil para profundidade */
+  border-bottom: 2px solid #ffffff; /* Linha sutil para separar */
+}
+
+header .logo {
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+header .logo h1 {
+  color: white;
+  margin: 0;
+  text-transform: uppercase;
+  font-family: 'Playfair Display', serif; /* Fonte Playfair Display para o logo */
+}
+
+h3 {
+  color: #fd8fb4;
+}
+
+h1 {
+  color: #fc84ac;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin-right: 30px; /* Espaçamento entre os itens */
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-weight: 600;
+  color: white;
+  font-size: 18px;
+  text-transform: uppercase; /* Letra maiúscula para dar ênfase */
+  transition: color 0.3s ease, transform 0.3s ease; /* Animações suaves */
+}
+
+nav ul li a:hover {
+  color: #ffdee9; /* Cor de hover mais clara */
+  transform: scale(1.1); /* Efeito de aumento ao passar o mouse */
+}
+
+/* Main Content */
+main {
+  padding: 50px 20px;
+}
+
+.home {
+  text-align: center;
+  padding: 50px 0;
+  background-color: #FFF0F5;
+}
+
+.home h2 {
+  font-size: 36px;
+  color: #F0A6CA;
+  font-family: 'Playfair Display', serif; /* Fonte Playfair Display para o título */
+}
+
+.home p {
+  font-size: 18px;
+  color: #252121;
+  font-family: 'Lora', serif; /* Fonte Lora para o texto do parágrafo */
+}
+
+.products {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.product-card {
+  background-color: #FFF;
+  border: 1px solid #FFDEE9;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  width: 250px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.product-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.product-card h3 {
+  font-size: 18px;
+  color: #F0A6CA;
+  margin: 10px 0;
+  font-family: 'Playfair Display', serif; /* Fonte Playfair Display para os títulos dos produtos */
+}
+
+.product-card p {
+  color: #FF80AB;
+  font-size: 16px;
+  font-family: 'Lora', serif; /* Fonte Lora para os preços */
+}
+
+.product-card button {
+  background-color: #F0A6CA;
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.product-card button:hover {
+  background-color: #FF80AB;
+  transform: scale(1.05);
+}
+
+/* About Section */
+.about, .contact {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #FFF0F5;
+}
+
+.about h2, .contact h2 {
+  font-size: 36px;
+  color: #F0A6CA;
+  font-family: 'Playfair Display', serif; /* Fonte Playfair Display para os títulos */
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.contact form textarea {
+  width: 60%;
+  height: 150px;
+  margin-bottom: 20px;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #FFDEE9;
+  font-family: 'Lora', serif; /* Fonte Lora para a área de texto */
+}
+
+.contact form button {
+  background-color: #F0A6CA;
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Footer */
+footer {
+  background-color: #FF80AB;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+footer .social-links a {
+  text-decoration: none;
+  color: white;
+  margin: 0 10px;
+  font-weight: 600;
+}
+
+footer .social-links a:hover {
+  color: #F0A6CA;
+}
+
+/* Responsividade para o Header e Layout */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    margin-top: 20px;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  .products {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product-card {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+
+  .contact form textarea {
+    width: 80%;
+  }
+}
+
+/* Ícones no header */
+.header-icons {
+  display: flex;
+  gap: 20px; /* Espaçamento entre os ícones */
+}
+
+.header-icon {
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.header-icon:hover {
+  color: #ffdee9; /* Cor de hover para os ícones */
+}
+
+/* Carrinho de Compras */
+.cart {
+  padding: 50px 20px;
+  background-color: #FFF0F5;
+  text-align: center;
+}
+
+.cart-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.cart-item {
+  background-color: #FFF;
+  border: 1px solid #FFDEE9;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  width: 200px;
+}
+
+.cart-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.cart-item h3 {
+  font-size: 18px;
+  color: #F0A6CA;
+  margin: 10px 0;
+}
+
+.cart-item p {
+  color: #FF80AB;
+  font-size: 16px;
+}
+
+.cart-item button {
+  background-color: #FF80AB;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.cart-item button:hover {
+  background-color: #F0A6CA;
+}
+
+.total {
+  font-size: 20px;
+  color: #F0A6CA;
+  margin-top: 20px;
+}
+
+.checkout-btn {
+  background-color: #F0A6CA;
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.checkout-btn:hover {
+  background-color: #FF80AB;
+}
+
+/* Expansão da seção Sobre Nós */
+.about {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #FFF0F5;
+}
+
+.about h2 {
+  font-size: 36px;
+  color: #F0A6CA;
+}
+
+.about p {
+  font-size: 18px;
+  color: #333;
+  line-height: 1.6;
+  margin: 20px 0;
+}
